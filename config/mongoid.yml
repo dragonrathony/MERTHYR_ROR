@@ -74,6 +74,7 @@ development:
 test:
   sessions:
     default:
+      # database: welovemerthyr_test
       database: welovemerthyr_test1
       hosts:
         - localhost:27017
@@ -86,8 +87,7 @@ test:
 production:
   sessions:
     default:
-      # uri: <%= ENV['MONGOHQ_URL'] %>
-      uri: mongodb://heroku_rcqq77w9:5tlgfke4ern0fk0m3a88vnhf6o@ds343718.mlab.com:43718/heroku_rcqq77w9
+      uri: <%= ENV['MONGOHQ_URL'] %>
       options:
         # skip_version_check: true
         # safe: true
